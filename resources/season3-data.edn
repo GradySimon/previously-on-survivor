@@ -1,0 +1,103 @@
+[
+
+;; Season
+{:db/id #db/id[:db.part/user -1000001],
+ :season/number 3}
+
+;; Tribes
+{:db/id #db/id[:db.part/user -1100000],
+ :tribe/fname "Boran",
+ :tribe/season #db/id[:db.part/user -1000001]}
+
+{:db/id #db/id[:db.part/user -1200000],
+ :tribe/fname "Samburu",
+ :tribe/season #db/id[:db.part/user -1000001]}
+
+;; Players
+{:db/id #db/id[:db.part/user -1000003],
+ :player/first-name "Linda",
+ :player/last-name "Spencer",
+ :player/tribe #db/id[:db.part/user -1200000]}
+
+{:db/id #db/id[:db.part/user -1000004],
+ :player/first-name "Kim",
+ :player/last-name "Johnson",
+ :player/tribe #db/id[:db.part/user -1100000]}
+
+{:db/id #db/id[:db.part/user -1000005],
+ :player/first-name "Kim",
+ :player/last-name "Powers",
+ :player/tribe #db/id[:db.part/user -1200000]}
+
+{:db/id #db/id[:db.part/user -1000006],
+ :player/first-name "Clarence",
+ :player/last-name "Black",
+ :player/tribe #db/id[:db.part/user -1100000]}
+
+{:db/id #db/id[:db.part/user -1000007],
+ :player/first-name "Teresa",
+ :player/last-name "Cooper",
+ :player/tribe #db/id[:db.part/user -1200000]}
+
+{:db/id #db/id[:db.part/user -1000008],
+ :player/first-name "Tom",
+ :player/last-name "Buchanan",
+ :player/tribe #db/id[:db.part/user -1100000]}
+
+{:db/id #db/id[:db.part/user -1000009],
+ :player/first-name "Lindsey",
+ :player/last-name "Richter",
+ :player/tribe #db/id[:db.part/user -1200000]}
+
+{:db/id #db/id[:db.part/user -1000010],
+ :player/first-name "Frank",
+ :player/last-name "Garrison",
+ :player/tribe #db/id[:db.part/user -1200000]}
+
+{:db/id #db/id[:db.part/user -1000011],
+ :player/first-name "Silas",
+ :player/last-name "Gaither",
+ :player/tribe #db/id[:db.part/user -1200000]}
+
+{:db/id #db/id[:db.part/user -1000012],
+ :player/first-name "Lex",
+ :player/last-name "van den Berghe",
+ :player/tribe #db/id[:db.part/user -1100000]}
+
+{:db/id #db/id[:db.part/user -1000013],
+ :player/first-name "Carl",
+ :player/last-name "Bilancione",
+ :player/tribe #db/id[:db.part/user -1200000]}
+
+{:db/id #db/id[:db.part/user -1000014],
+ :player/first-name "Brandon",
+ :player/last-name "Quinton",
+ :player/tribe #db/id[:db.part/user -1200000]}
+
+{:db/id #db/id[:db.part/user -1000015],
+ :player/first-name "Kelly",
+ :player/last-name "Goldsmith",
+ :player/tribe #db/id[:db.part/user -1100000]}
+
+{:db/id #db/id[:db.part/user -1000016],
+ :player/first-name "Jessie",
+ :player/last-name "Camacho",
+ :player/tribe #db/id[:db.part/user -1100000]}
+
+{:db/id #db/id[:db.part/user -1000017],
+ :player/first-name "Diane",
+ :player/last-name "Ogden",
+ :player/tribe #db/id[:db.part/user -1100000]}
+
+{:db/id #db/id[:db.part/user -1000018],
+ :player/first-name "Ethan",
+ :player/last-name "Zohn",
+ :player/tribe #db/id[:db.part/user -1100000]}
+
+;; Episodes
+
+{:db/id #db/id[:db.part/user -1000019],
+ :episode/number 1,
+ :episode/season #db/id[:db.part/user -1000001],
+ :episode/air-date #inst "2015-06-11T19:00:00-07:00"}
+]

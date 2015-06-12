@@ -1,0 +1,130 @@
+[
+ ;;;; event
+
+ ;; event/type
+ {:db/id #db/id[:db.part/db]
+  :db/ident :event/type
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The type of the event, an enum, e.g. :event.type/immunity or :event.type/reward"
+  :db.install/_attribute :db.part/db}
+ 
+ ;; event/type enum values
+ [:db/add #db/id[:db.part/user] :db/ident :event.type/reward]
+ [:db/add #db/id[:db.part/user] :db/ident :event.type/immunity]
+ [:db/add #db/id[:db.part/user] :db/ident :event.type/tribal]
+
+ ;; event/episode
+ {:db/id #db/id[:db.part/db]
+  :db/ident :event/episode
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The episode the event occurred in."
+  :db.install/_attribute :db.part/db}
+
+ ;; event/winner
+ {:db/id #db/id[:db.part/db]
+  :db/ident :event/winner
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/doc "Any players who can be considered to have won the event."
+  :db.install/_attribute :db.part/db}
+
+ ;; event/loser
+ {:db/id #db/id[:db.part/db]
+  :db/ident :event/loser
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/doc "Any players who can be considered to have lost the event."
+  :db.install/_attribute :db.part/db}
+
+ ;;;; season
+
+ ;; season/number
+ {:db/id #db/id[:db.part/db]
+  :db/ident :season/number
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The number of the season."
+  :db.install/_attribute :db.part/db}
+
+ ;;;; episode
+
+ ;; episode/season
+ {:db/id #db/id[:db.part/db]
+  :db/ident :episode/season
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The season the episode occurred in."
+  :db.install/_attribute :db.part/db}
+
+ ;; episode/number
+ {:db/id #db/id[:db.part/db]
+  :db/ident :episode/number
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The number of the episode within its season."
+  :db.install/_attribute :db.part/db}
+
+ ;; episode/air-date
+ {:db/id #db/id[:db.part/db]
+  :db/ident :episode/air-date
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "The time the episode started airing."
+  :db.install/_attribute :db.part/db}
+
+ ;;;; player
+
+ ;; player/first-name
+ {:db/id #db/id[:db.part/db]
+  :db/ident :player/first-name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The player's name."
+  :db.install/_attribute :db.part/db}
+
+;; player/last-name
+{:db/id #db/id[:db.part/db]
+ :db/ident :player/last-name
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one
+ :db/doc "The player's name."
+ :db.install/_attribute :db.part/db}
+
+ ;; player/uuid
+ {:db/id #db/id[:db.part/db]
+  :db/ident :player/uuid
+  :db/valueType :db.type/uuid
+  :db/unique :db.unique/identity
+  :db/cardinality :db.cardinality/one
+  :db/doc "A uuid for this player."
+  :db.install/_attribute :db.part/db}
+
+ ;; player/tribe
+ {:db/id #db/id[:db.part/db]
+  :db/ident :player/tribe
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The player's tribe."
+  :db.install/_attribute :db.part/db}
+
+ ;;;; tribe
+
+ ;; tribe/name
+ {:db/id #db/id[:db.part/db]
+  :db/ident :tribe/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The tribe's name"
+  :db.install/_attribute :db.part/db}
+
+ ;; tribe/season
+ {:db/id #db/id[:db.part/db]
+  :db/ident :tribe/season
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The season the tribe appears in."
+  :db.install/_attribute :db.part/db}
+ 
+]
