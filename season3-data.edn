@@ -3,6 +3,9 @@
 {:db/id #db/id[:db.part/user -1000001],
  :season/number 3}
 
+{:db/id #db/id[:db.part/user -1000021]
+ :season/number 30}
+
 ;; Tribes
 {:db/id #db/id[:db.part/user -1100000],
  :tribe/name "Boran",
@@ -95,8 +98,18 @@
 
 ;; Episodes
 
+{:db/id #db/id[:db.part/user -1000022],
+ :episode/number 1,
+ :season/_episodes #db/id[:db.part/user -1000021],
+ :episode/air-date #inst "2015-05-25T19:00:00-07:00"}
+
 {:db/id #db/id[:db.part/user -1000019],
  :episode/number 1,
  :season/_episodes #db/id[:db.part/user -1000001],
  :episode/air-date #inst "2015-06-18T19:00:00-07:00"}
+
+{:db/id #db/id[:db.part/user -1000020],
+ :episode/number 2,
+ :season/_episodes #db/id[:db.part/user -1000001],
+ :episode/air-date #inst "2015-06-25T19:00:00-07:00"}
 ]
