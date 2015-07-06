@@ -6,7 +6,17 @@
   :db/cardinality :db.cardinality/one
   :db/unique :db.unique/identity
   :db/doc "A UUID identifying the entity."
+  :db.install/_attribute :db.part/db}
+
+ ;; common/designation
+ {:db/id #db/id[:db.part/db]
+  :db/ident :common/designation
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/doc "A UUID identifying the entity."
   :db.install/_attribute :db.part/db} 
+  
+  [:db/add #db/id[:db.part/user] :db/ident :common.designation/current-season]
 
  ;;;; event
 
@@ -37,6 +47,22 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/many
   :db/doc "Any players who can be considered to have lost the event."
+  :db.install/_attribute :db.part/db}
+
+ ;; event.tribal/voted-out
+ {:db/id #db/id[:db.part/db]
+  :db/ident :event.tribal/voted-out
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The player who was voted out during this tribal council."
+  :db.install/_attribute :db.part/db}
+
+ ;; event.tribal/tribe
+ {:db/id #db/id[:db.part/db]
+  :db/ident :event.tribal/tribe
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "The tribe that went to tribal council."
   :db.install/_attribute :db.part/db}
 
  ;;;; season

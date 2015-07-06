@@ -1,7 +1,8 @@
 [
 ;; Season
 {:db/id #db/id[:db.part/user -1000001],
- :season/number 3}
+ :season/number 3
+ :common/designation :common.designation/current-season}
 
 {:db/id #db/id[:db.part/user -1000021]
  :season/number 30}
@@ -106,10 +107,36 @@
 {:db/id #db/id[:db.part/user -1000019],
  :episode/number 1,
  :season/_episodes #db/id[:db.part/user -1000001],
- :episode/air-date #inst "2015-06-18T19:00:00-07:00"}
+ :episode/air-date #inst "2015-06-18T19:00:00-07:00"
+ :episode/events
+    [#db/id[:db.part/user -1000023]]}
 
 {:db/id #db/id[:db.part/user -1000020],
  :episode/number 2,
  :season/_episodes #db/id[:db.part/user -1000001],
- :episode/air-date #inst "2015-06-25T19:00:00-07:00"}
+ :episode/air-date #inst "2015-06-25T19:00:00-07:00"
+ :episode/events
+    [#db/id[:db.part/user -1000025]]}
+
+{:db/id #db/id[:db.part/user -1000024],
+ :episode/number 3,
+ :season/_episodes #db/id[:db.part/user -1000001],
+ :episode/air-date #inst "2015-07-02T19:00:00-07:00"}
+
+;; Events
+
+;; Season 3, episode 1 tribal
+{:db/id #db/id[:db.part/user -1000023]
+ :event/type :event.type/tribal
+ :event.tribal/tribe #db/id[:db.part/user -1100000] ; Boran went to tribal
+ :event.tribal/voted-out #db/id[:db.part/user -1000017]} ; Diane got voted out
+
+;; Season 3, episode 2 tribal
+{:db/id #db/id[:db.part/user -1000025]
+ :event/type :event.type/tribal
+ :event.tribal/tribe #db/id[:db.part/user -1100000] ; Boran went to tribal
+ :event.tribal/voted-out #db/id[:db.part/user -1000016]} ; Jessie got voted out
+
 ]
+
+
